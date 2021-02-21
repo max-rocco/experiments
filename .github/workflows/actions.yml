@@ -38,4 +38,4 @@ jobs:
         run: ls
         
       - name: Run TS
-        run: tsc . && node .
+        run: tsc index.ts && node index.js
