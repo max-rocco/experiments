@@ -1,7 +1,7 @@
 name: Actions
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   exec:
