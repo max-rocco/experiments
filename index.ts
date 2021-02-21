@@ -5,7 +5,8 @@
  */
 
 (function root(message: string) {
+
   console.log('Program execution is about to begin.');
   console.log(message);
   console.log('Program executed successfully!');
-})('Hello, world! ⚡');
+})('Hello, WORLD! ⚡');
