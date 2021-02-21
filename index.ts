@@ -4,7 +4,7 @@
  * Max Rocco (c) 2021
  */
 
-(function main(message: string) {
+(function tu(message: string) {
   console.log(message);
   console.log('Program executed successfully!');
 })('Hello, WORLD! ⚡');
