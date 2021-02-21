@@ -7,4 +7,4 @@
 (function main(message: string) {
   console.log(message);
   console.log('Program executed successfully!');
-})('Hello, world! ⚡');
+})('Hello, WORLD! ⚡');
