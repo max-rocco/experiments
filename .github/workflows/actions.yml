@@ -1,0 +1,38 @@
+name: Hello
+on: push
+
+jobs:
+  exec:
+    name: Say Hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Hello
+        run: echo "Hello, world! ⚡"
+  
+  curl:
+    name: Fetch Todos
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch
+        run: curl https://jsonplaceholder.typicode.com/todos
+
+  run-ts:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          
+      - name: Install Typescript
+        run: npm install typescript
+        
+      - name: Run TS
+        run: tsc . && node .
