@@ -36,9 +36,6 @@ jobs:
           
       - name: Install Typescript
         run: npm install --global typescript
-        
-      - name: Debug
-        run: ls
-        
+
       - name: Run TS
         run: tsc index.ts && node index.js
